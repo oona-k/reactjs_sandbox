@@ -1,3 +1,7 @@
+This is my react school project
+
+![3rd task: Counter](./public/3_task.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
