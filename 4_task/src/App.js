@@ -12,8 +12,11 @@ class App extends Component {
     message: ""
   };
   changeHandler = event => {
-    console.log(event.target.value);
-    this.setState({ firstname: event.target.value });
+    console.log(event.target.name);
+    if (event.target.name === "firstname"){this.setState({ firstname: event.target.value });}
+    else if (event.target.name === "lastname"){this.setState({ lastname: event.target.value });}
+    else if (event.target.name === "phone"){this.setState({ phone: event.target.value });}
+    else {this.setState({ message: event.target.value });}
   };
   render() {
     return (
@@ -24,7 +27,12 @@ class App extends Component {
         {/*        <input type="text" onChange={this.changeHandler}></input>
         <p>{this.state.firstname}</p> */}
         <div>
-          <View firstname={this.state.firstname} />
+          <View
+            firstname={this.state.firstname}
+            lastname={this.state.lastname}
+            phone={this.state.phone}
+            message={this.state.message}
+          />
         </div>
       </main>
     );
