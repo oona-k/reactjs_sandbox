@@ -6,10 +6,12 @@ const View = props => {
   return (
     <div className="view">
       <h1>This is your input:</h1>
-      <p>First name: {props.firstname}</p>
-      <p>Last name: {props.lastname}</p>
-      <p>Phone number: {props.phone}</p>
-      <p>Message:{props.message}</p>
+      <div className="inputs">
+      <p>First name: <span className="writing">{props.firstname}</span></p>
+      <p>Last name: <span className="writing">{props.lastname}</span></p>
+      <p>Phone number: <span className="writing">{props.phone}</span></p>
+      <p>Message: <span className="writing">{props.message}</span></p>
+      </div>
     </div>
   );
 };

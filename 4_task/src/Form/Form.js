@@ -26,7 +26,7 @@ const Form = props => {
       <div className="formGroup">
         <label htmlFor="phone">Phone number</label>
         <input
-          type="tel"
+          type=""
           id="phone"
           name="phone"
           onChange={props.change}

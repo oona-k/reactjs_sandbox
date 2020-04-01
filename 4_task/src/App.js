@@ -24,8 +24,6 @@ class App extends Component {
         <div>
           <Form change={this.changeHandler} />
         </div>
-        {/*        <input type="text" onChange={this.changeHandler}></input>
-        <p>{this.state.firstname}</p> */}
         <div>
           <View
             firstname={this.state.firstname}
