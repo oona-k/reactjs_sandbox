@@ -4,12 +4,13 @@
     display: inline-block;
     width: 100%;
     color: white;
-    padding: 40px;
+    padding: 40px 0;
     font-family: 'Raleway', sans-serif;
 }
 .formGroup {
     margin: 10px;
     display: flex;
+    padding: 0 40px;
 }
 input, textarea{
     border-radius: 3px;
