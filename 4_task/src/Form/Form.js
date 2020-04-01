@@ -1,12 +1,18 @@
 import React from "react";
 import "./Form.css";
+import App from "../App";
 
-const Form = () => {
+const Form = props => {
   return (
     <div className="form">
       <div className="formGroup">
         <label htmlFor="firstName">First Name</label>
-        <input type="text" id="firstName" name="firstName"></input>
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          onChange={props.change}
+        ></input>
       </div>
       <div className="formGroup">
         <label htmlFor="lastName">Last Name</label>
