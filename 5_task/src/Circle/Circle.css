@@ -5,3 +5,7 @@
     border-radius: 50%;
     background-color: white;
 }
+
+.circle.active {
+    background-color: black;
+}
