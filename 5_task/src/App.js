@@ -1,9 +1,24 @@
 import React, { Component } from 'react';
 import Circle from './Circle/Circle';
 
+const getRndInteger = (min, max) => {
+  return Math.floor(Math.random() * (max - min) ) + min;
+}
+
 class App extends Component {
   state = {
     score: 0,
+    current: 0,
+  };
+
+  next = () => {
+    let nextActive = undefined;
+    do {
+      nextActive= getRndInteger(1,4);
+    } while (nextActive === this.state.current);
+    this.setState({
+      current: nextActive,
+    });
   };
 
   clickHandler = (circleID) => {
