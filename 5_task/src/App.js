@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Circle from './Circle/Circle';
 
 const getRndInteger = (min, max) => {
-  return Math.floor(Math.random() * (max - min) ) + min;
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 
 class App extends Component {
@@ -10,6 +10,9 @@ class App extends Component {
     score: 0,
     current: 0,
   };
+
+pace = 1500;
+timer = undefined;
 
   next = () => {
     let nextActive = undefined;
@@ -19,6 +22,8 @@ class App extends Component {
     this.setState({
       current: nextActive,
     });
+    this.timer = setTimeout(this.next, this.pace);
+    console.log(this.state.current);
   };
 
   clickHandler = (circleID) => {
@@ -27,6 +32,14 @@ this.setState({
   score: this.state.score + 1
 })
   };
+
+  startHandler = () => {
+    this.next();
+  }
+  endHandler = () => {
+    clearTimeout(this.timer);
+  }
+
   render() {
     return (
       <div>
@@ -39,8 +52,8 @@ this.setState({
         <Circle click={this.clickHandler.bind(this, 4)}/>
         </main>
         <div>
-        <button>Start game</button>
-        <button>End game</button>
+        <button onClick={this.startHandler}>Start game</button>
+        <button onClick={this.endHandler}>End game</button>
         </div>
       </div>
     );
