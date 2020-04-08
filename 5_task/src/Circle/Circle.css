@@ -4,6 +4,7 @@
     width: 150px;
     border-radius: 50%;
     background-color: white;
+    margin: 10px;
 }
 
 .circle.active {

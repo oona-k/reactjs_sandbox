@@ -42,7 +42,7 @@ this.setState({
 
   render() {
     return (
-      <div>
+      <div className="container">
         <h1>Speedtest</h1>
         <p>Your score: {this.state.score}</p>
         <main>
@@ -51,9 +51,9 @@ this.setState({
         <Circle active={this.state.current === 3} buttonColor="blue" click={this.clickHandler.bind(this, 3)}/>
         <Circle active={this.state.current === 4} buttonColor="yellow" click={this.clickHandler.bind(this, 4)}/>
         </main>
-        <div>
-        <button onClick={this.startHandler}>Start game</button>
-        <button onClick={this.endHandler}>End game</button>
+        <div className="buttons">
+        <button onClick={this.startHandler}>Start Game</button>
+        <button onClick={this.endHandler}>End Game</button>
         </div>
       </div>
     );
