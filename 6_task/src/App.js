@@ -5,6 +5,7 @@ import Post from "./Post/Post";
 
 const posts = [
   {
+    id: 1,
     title: "Lorem ipsum dolor sit amet",
     author: "Author",
     desc:
@@ -12,6 +13,7 @@ const posts = [
     img: "https://source.unsplash.com/featured/sun",
   },
   {
+    id: 2,
     title: "At erat pellentesque adipiscing commodo elit at",
     author: "Author",
     desc:
@@ -19,6 +21,7 @@ const posts = [
     img: "https://source.unsplash.com/featured/sea",
   },
   {
+    id: 3,
     title: "Tristique senectus et netus",
     author: "Author",
     desc:
@@ -31,29 +34,28 @@ class App extends Component {
   state = {
     posts: posts,
   };
+
+removeHandler = removeId => {
+  const oldArray = [...this.state.posts];
+  oldArray.splice(removeId, 1)
+  this.setState({posts: oldArray});
+};
+
   render() {
-    return (
-      <div className="posts">
+    const postsList = this.state.posts.map((post, index) => {
+      return (
         <Post
-          title={this.state.posts[0].title}
-          author={this.state.posts[0].author}
-          desc={this.state.posts[0].desc}
-          img={this.state.posts[0].img}
+          key={post.id}
+          title={post.title}
+          author={post.author}
+          desc={post.desc}
+          img={post.img}
+          click={this.removeHandler.bind(this, index)}
         />
-        <Post
-          title={this.state.posts[1].title}
-          author={this.state.posts[1].author}
-          desc={this.state.posts[1].desc}
-          img={this.state.posts[1].img}
-        />
-        <Post
-          title={this.state.posts[2].title}
-          author={this.state.posts[2].author}
-          desc={this.state.posts[2].desc}
-          img={this.state.posts[2].img}
-        />
-      </div>
-    );
+      );
+    });
+
+    return <div className="posts">{postsList}</div>;
   }
 }
 export default App;
