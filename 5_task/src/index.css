@@ -4,26 +4,43 @@ body {
   height: 100vh;
   margin: 0;
   font-family: "Righteous", cursive;
+  background: rgb(113, 114, 163);
   background: linear-gradient(
+    0deg,
+    rgba(113, 114, 163, 0.7287289915966386) 0%,
+    rgba(1, 8, 59, 0.8603816526610644) 100%
+  );
+  /*   background: linear-gradient(
       0deg,
       rgba(238, 148, 11, 0.7) 0%,
       rgba(238, 8, 8, 0.9) 100%
-    )
-    center center no-repeat;
-}
-/* 
-.container{
-  display: flex;
+    ) 
+    center center no-repeat; */
+
+  background: rgb(9, 18, 113);
+  background: linear-gradient(
+    45deg,
+    rgba(1, 7, 65, 0.91) 0%,
+    rgba(147,152,189,0.8) 100%
+  );
+  display: grid;
+  justify-items: center;
   align-items: center;
-} */
-h1, p {
+}
+
+.container {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+/* h1, p {
   display: flex;
   align-items: center;
 }
 .buttons {
   display: flex;
   align-items: center;
-}
+} */
 button {
   padding: 10px;
   border-radius: 5px;
@@ -31,4 +48,5 @@ button {
   font-size: 16px;
   border: none;
   margin: 10px;
+  margin-top: 50px;
 }

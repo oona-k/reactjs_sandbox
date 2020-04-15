@@ -1,12 +1,15 @@
 .circle {
-    display: inline-block;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    background-color: white;
-    margin: 10px;
+  display: inline-block;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: white;
+  margin: 10px;
 }
 
 .circle.active {
-    background-color: black;
+  background: rgba(128, 128, 128) url("./cute-spider.png") center center;
+  background-size: 80%;
+  background-repeat: no-repeat;
 }
+/* image from https://flyclipart.com/cute-spider-cute-as-a-bug-free-spider-clipart-792711 */
