@@ -1,4 +1,4 @@
-This is screenshot of my React schoolproject.
+Screenshots of my React school project.
 
 ![5th task: Speedtest](./public/speedtest.PNG)
 
