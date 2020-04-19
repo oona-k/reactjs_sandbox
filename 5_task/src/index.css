@@ -10,12 +10,6 @@ body {
     rgba(113, 114, 163, 0.7287289915966386) 0%,
     rgba(1, 8, 59, 0.8603816526610644) 100%
   );
-  /*   background: linear-gradient(
-      0deg,
-      rgba(238, 148, 11, 0.7) 0%,
-      rgba(238, 8, 8, 0.9) 100%
-    ) 
-    center center no-repeat; */
 
   background: rgb(9, 18, 113);
   background: linear-gradient(
@@ -33,14 +27,7 @@ body {
   justify-items: center;
   align-items: center;
 }
-/* h1, p {
-  display: flex;
-  align-items: center;
-}
-.buttons {
-  display: flex;
-  align-items: center;
-} */
+
 button {
   padding: 10px;
   border-radius: 5px;
