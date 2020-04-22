@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellota&display=swap");
+
+button {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(148, 107, 107, 0.9);
+  color: white;
+  font-size: 1.2rem;
+  font-family: "Bellota", cursive;
+}
