@@ -1,5 +1,10 @@
 import React from "react";
 import "./Post.css";
+import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faThumbsUp, faThumbsDown} from "@fortawesome/free-solid-svg-icons";
+
+
+
 
 const Post = (props) => {
   return (
@@ -10,6 +15,9 @@ const Post = (props) => {
       </p>
       <p>{props.desc}</p>
       <img src={props.img} alt={props.title} />
+      <div><button>Like <FontAwesomeIcon icon = {faThumbsUp}/></button>
+        Likes:
+      </div>
     </div>
   );
 };
