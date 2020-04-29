@@ -39,7 +39,6 @@ const Header = () => {
           <Nav.Link><Link to="/">Home</Link></Nav.Link>
           <Nav.Link> <Link to="/about">About me</Link></Nav.Link>
           <Nav.Link><Link to="/blog">Blog</Link></Nav.Link>
-          <Nav.Link href="#link">link</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
@@ -72,66 +71,6 @@ const Home = () => {
   );
 };
 
-/* const Blog = () => {
-  return (
-    <div className="posts">
-      <div className="post">
-        <img src="https://source.unsplash.com/featured/laptop" alt="" />
-        <h3>Post 1</h3>
-        <p>
-          Lorem ipsum dolorsit amet, consecteturadipiscingelit.
-          Pellentesquescelerisqueeujustoquisscelerisque. Aeneanmolestiemagna non
-          pharetra finibus. Sedelementumelitegetlacusvolutpattempor.
-          Pellentesqueegestasjustosedluctussodales. Nam volutpat, nisi et
-          aliquetmattis, estipsum dignissimeros, egetauctordolordiamvelelit.
-          Sedet nequeullamcorper, fermentum estid, vulputateerat. Praesentvitae
-          elementumsapien. Praesentnon erosa nuncdapibuselementumin in arcu. Nam
-          pharetra suscipitex, at tempus ante viverrasit amet.
-        </p>
-        <Link to="/blog/post1">Read more</Link>
-       
-      </div>
-      <div className="post">
-        <img src="https://source.unsplash.com/featured/office" alt="" />
-        <h3>Post 2</h3>
-        <p>
-          Lorem ipsum dolorsit amet, consecteturadipiscingelit.
-          Pellentesquescelerisqueeujustoquisscelerisque. Aeneanmolestiemagna non
-          pharetra finibus. Sedelementumelitegetlacusvolutpattempor.
-          Pellentesqueegestasjustosedluctussodales. Nam volutpat, nisi et
-          aliquetmattis, estipsum dignissimeros, egetauctordolordiamvelelit.
-          Sedet nequeullamcorper, fermentum estid, vulputateerat. Praesentvitae
-          elementumsapien.
-        </p>
-        <button>Read more</button>
-      </div>
-      <div className="post">
-        <img src="https://source.unsplash.com/featured/ict" alt="" />
-        <h3>Post 3</h3>
-        <p>
-          Lorem ipsum dolorsit amet, consecteturadipiscingelit.
-          Pellentesquescelerisqueeujustoquisscelerisque. Aeneanmolestiemagna non
-          pharetra finibus. Sedelementumelitegetlacusvolutpattempor.
-          Pellentesqueegestasjustosedluctussodales.
-        </p>
-        <button>Read more</button>
-      </div>
-      <div className="post">
-        <img src="https://source.unsplash.com/featured/flower" alt="" />
-        <h3>Post 4</h3>
-        <p>
-          Lorem ipsum dolorsit amet, consecteturadipiscingelit.
-          Pellentesquescelerisqueeujustoquisscelerisque. Aeneanmolestiemagna non
-          pharetra finibus. Sedelementumelitegetlacusvolutpattempor.
-          Pellentesqueegestasjustosedluctussodales. Nam volutpat, nisi et
-          aliquetmattis, estipsum dignissimeros, egetauctordolordiamvelelit.
-          Sedet nequeullamcorper, fermentum estid, vulputateerat.
-        </p>
-        <button>Read more</button>
-      </div>
-    </div>
-  );
-}; */
 
 // const ReadMore = () => {
 //   return (

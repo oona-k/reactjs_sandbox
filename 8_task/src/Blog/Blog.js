@@ -8,24 +8,36 @@ import {
   useParams,
 } from "react-router-dom";
 
-import Button from 'react-bootstrap/Button';
-
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+import Col from "react-bootstrap/Col";
 
 const Post = (props) => {
+  return (
+    <Card>
+      <Card.Img variant="top" src={props.img} alt={props.title} />
+      <Card.Body>
+        <Card.Title>{props.title}</Card.Title>
+        <Card.Text>{props.desc}</Card.Text>
+        <Button variant="primary">Read more</Button>
+      </Card.Body>
+    </Card>
+  );
+};
+
+/* const Post = (props) => {
   return (
     <div className="post">
          <img src={props.img} alt={props.title} />
       <h2>{props.title}</h2>
-      <p>
-        <em>{props.author}</em>
-      </p>
+     
       <p>{props.desc}</p>
      
       <Link to={`/blog/${props.link}`} className="readMoreBtn">Read more</Link>
       <Button variant="primary">Primary</Button>{' '}
     </div>
   );
-};
+}; */
 
 const posts = [
   {
@@ -41,7 +53,7 @@ const posts = [
   {
     id: 2,
     title: "Post 2",
-   
+
     desc:
       "Feugiat sed nulla ullamcorper, massa ultricies rhoncus sed, dui hendrerit viverra eu eu minima, ut ornare. Lobortis vel, faucibus libero nec urna velit metus, tortor etiam mattis auctor accumsan. Cursus neque consectetuer convallis doloremque arcu, praesent molestie pede sodales in erat. Sodales volutpat tellus eleifend.",
     //img: "https://source.unsplash.com/featured/sea",
@@ -51,7 +63,7 @@ const posts = [
   {
     id: 3,
     title: "Post 3",
-  
+
     desc:
       "Semper viverra nam libero justo laoreet sit amet cursus sit. Sed vulputate mi sit amet mauris commodo quis imperdiet massa. Velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus. Orci sagittis eu volutpat odio facilisis mauris sit. Nunc lobortis mattis aliquam faucibus. ",
     //img: "https://source.unsplash.com/featured/nature",
@@ -61,7 +73,7 @@ const posts = [
   {
     id: 4,
     title: "Post 4",
-  
+
     desc:
       "Semper viverra nam libero justo laoreet sit amet cursus sit. Sed vulputate mi sit amet mauris commodo quis imperdiet massa. Velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus. Orci sagittis eu volutpat odio facilisis mauris sit. Nunc lobortis mattis aliquam faucibus. ",
     //img: "https://source.unsplash.com/featured/nature",
@@ -79,12 +91,10 @@ class Blog extends Component {
     const postsList = this.state.posts.map((post, index) => {
       return (
         <Post
-        img={post.img}
+          img={post.img}
           key={post.id}
           title={post.title}
-     
           desc={post.desc}
-         
           link={post.link}
         />
       );

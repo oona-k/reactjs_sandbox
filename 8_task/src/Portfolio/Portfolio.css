@@ -1,8 +1,14 @@
 body {
 }
-nav li {
+/* nav li {
   display: inline-block;
   margin: 10px;
+} */
+.navigation-bar a{
+  color: white;
+}
+.navigation-bar a:hover{
+  text-decoration: none;
 }
 .home {
   background-color: steelblue;
@@ -13,13 +19,14 @@ nav li {
   align-content: center;
 }
 
-.posts {
+ .posts {
   display: grid;
   align-items: flex-start;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
   margin: 1rem;
 }
+/*
 .post {
   background-color: floralwhite;
   border-radius: 5px;
@@ -31,7 +38,7 @@ nav li {
 .post img {
   max-width: 22.7vw;
   max-height: 30vh;
-}
+} */
 /* .post button {
     border-radius: 5px;
     padding: 10px;
