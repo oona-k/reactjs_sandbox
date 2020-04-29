@@ -1,0 +1,50 @@
+body {
+}
+nav li {
+  display: inline-block;
+  margin: 10px;
+}
+.home {
+  background-color: steelblue;
+  color: white;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.posts {
+  display: grid;
+  align-items: flex-start;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  margin: 1rem;
+}
+.post {
+  background-color: floralwhite;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgb(141, 141, 141);
+  border: 10px solid floralwhite;
+  max-height: 90vh;
+  padding-bottom: 10px;
+}
+.post img {
+  max-width: 22.7vw;
+  max-height: 30vh;
+}
+/* .post button {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: darkorange;
+    color: white;
+    border: none;
+} */
+
+.readMoreBtn {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: darkorange;
+  color: white;
+  border: none;
+  text-decoration: none;
+}
