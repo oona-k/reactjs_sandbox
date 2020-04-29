@@ -10,8 +10,8 @@ const posts = [
     author: "Author",
     desc:
       "Lorem ipsum dolor sit amet, taciti nunc a quam, habitant nonummy vestibulum turpis in odio lectus, sed arcu nulla nunc diam, nunc donec. Elit sed, egestas molestie rutrum sed cras.",
-     img: "https://source.unsplash.com/1600x900/?nature",
-     //  img: "https://source.unsplash.com/featured/sun",
+    img: "https://source.unsplash.com/1600x900/?nature",
+    //  img: "https://source.unsplash.com/featured/sun",
   },
   {
     id: 2,
@@ -38,11 +38,11 @@ class App extends Component {
     posts: posts,
   };
 
-removeHandler = removeId => {
-  const oldArray = [...this.state.posts];
-  oldArray.splice(removeId, 1)
-  this.setState({posts: oldArray});
-};
+  removeHandler = (removeId) => {
+    const oldArray = [...this.state.posts];
+    oldArray.splice(removeId, 1);
+    this.setState({ posts: oldArray });
+  };
 
   render() {
     const postsList = this.state.posts.map((post, index) => {

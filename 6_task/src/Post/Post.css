@@ -14,11 +14,9 @@
   box-shadow: 0 0 20px rgb(141, 141, 141);
   border: 10px solid floralwhite;
   max-height: 100vh;
-  
 }
 img {
   max-width: 100%;
- 
 }
 button {
   margin-right: 10px;
