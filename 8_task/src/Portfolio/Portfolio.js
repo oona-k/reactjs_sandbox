@@ -9,67 +9,23 @@ import {
 } from "react-router-dom";
 
 import "./Portfolio.css";
+import MainNav from "../MainNav/MainNav";
 import Blog from "../Blog/Blog";
 import About from "../About/About";
+import Home from "../Home/Home";
 
 //REACT_BOOTSTRAP:
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import 'bootstrap/dist/css/bootstrap.min.css';
-/* import { LinkContainer} from "react-router-bootstrap";
+/* import { LinkContainer} from "react-router-bootstrap";*/
 
-const Header = () => {
-  return (
-    <Navbar bg="dark" variant="dark" expand="md">
-    <LinkContainer to="/#">
-    <Navbar.Brand>Name</Navbar.Brand>
-    </LinkContainer><Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">
-    <MainNav/>
-    </Navbar.Collapse></Navbar>
-    ) }; */
 
- const MainNav = () => {
-  return (
-    <Navbar bg="dark" variant="dark" expand="md">
-      <Navbar.Brand href="#home">Name</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="navigation-bar">
-          <Nav.Link><Link to="/">Home</Link></Nav.Link>
-          <Nav.Link> <Link to="/about">About me</Link></Nav.Link>
-          <Nav.Link><Link to="/blog">Blog</Link></Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
-  );
-}; 
 
-/* const MainNav = () => {
-  return (
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About me</Link>
-        </li>
-        <li>
-          <Link to="/blog">Blog</Link>
-        </li>
-      </ul>
-    </nav>
-  );
-};  */
 
-const Home = () => {
-  return (
-    <div className="home">
-      <h1>Welcome to my homepage</h1>
-    </div>
-  );
-};
+
+
+
 
 
 // const ReadMore = () => {
@@ -82,14 +38,13 @@ const Home = () => {
 //   );
 // };
 
-const Post = () => {
-  // let {path, url} = useRouteMatch();
+/* const Post = () => {
+
   let { post } = useParams();
-  // let blogComponent = Blog.GetPost(0);
-  // console.log(blogComponent);
+
   return <h2>This is post {post.title}</h2>;
 };
-
+ */
 const Portfolio = () => {
   return (
     <Router>
@@ -100,10 +55,10 @@ const Portfolio = () => {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
-          <Route path="/blog" exact component={Blog} />
-          <Route path="/blog/:post">
+          <Route path="/blog" component={Blog} />
+          {/* <Route path="/blog/:post">
             <Post />
-          </Route>
+          </Route> */}
         </Switch>
       </main>
     </Router>
