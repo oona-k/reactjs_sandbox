@@ -17,7 +17,7 @@ const Post = () => {
       <div>
         <h1>{post.title}</h1>
         <p>{post.desc}</p>
-        <Link to="./">Back to Blog</Link>
+        <Link to="../blog">Back to Blog</Link>
       </div>
     </Container>
   );

@@ -15,11 +15,13 @@ import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import CardGroup from "react-bootstrap/CardGroup";
+import Button from "react-bootstrap/Button";
 
 const Blog = () => {
   let match = useRouteMatch();
   const post = Postdata;
-
+console.log(match);
+console.log(post);
   const blogList = post.map((post, index) => {
     return (
       <Col lg={3} md={3} xs={6}>
@@ -29,7 +31,7 @@ const Blog = () => {
             <Card.Body>
               <Card.Title>{post.title}</Card.Title>
               <Card.Text>{post.desc}</Card.Text>
-              <Link to={`${match.url}/${post.title}`}>Read More</Link>
+              <Button variant="outline-primary"><Link to={`${match.url}/${post.title}`}>Read More</Link></Button>
             </Card.Body>
           </Card>
         </div>
