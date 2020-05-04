@@ -3,16 +3,18 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import Image from "react-bootstrap/Image";
 
 const About = () => {
   return (
     <Container style={{ marginTop: "20px" }}>
       <Row>
         <Col>
-          <img
-            style={{ width: "100%", borderRadius: "5px" }}
+          <Image
+            style={{ width: "100%" }}
             src="https://source.unsplash.com/MbFC_LfZyJo"
             alt="person using laptop"
+            rounded
           />
         </Col>
         <Col>

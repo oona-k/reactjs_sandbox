@@ -8,45 +8,44 @@ import {
   useParams,
 } from "react-router-dom";
 
-import postdata from "./postdata";
+import Postdata from "./Postdata";
 import Post from "./Post";
 
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
+import CardGroup from "react-bootstrap/CardGroup";
 
 const Blog = () => {
   let match = useRouteMatch();
-  const post = postdata;
-  console.log(match);
-  console.log(post);
+  const post = Postdata;
+
   const blogList = post.map((post, index) => {
     return (
-      <div key={post.id}>
-        <Col md={4}>
+      <Col lg={3} md={3} xs={6}>
+        <div key={post.id}>
           <Card>
             <Card.Img variant="top" src={post.img} alt={post.title} />
             <Card.Body>
               <Card.Title>{post.title}</Card.Title>
               <Card.Text>{post.desc}</Card.Text>
-
-              <Link style={{ color: "blue" }} to={`${match.url}/${post.title}`}>
-                Read More
-              </Link>
+              <Link to={`${match.url}/${post.title}`}>Read More</Link>
             </Card.Body>
           </Card>
-        </Col>
-      </div>
+        </div>
+      </Col>
     );
   });
-
+  console.log(blogList);
   return (
     <div>
       <Switch>
         <Route path="/blog/:postId">
           <Post />
         </Route>
-        <Route path={match.path}>{blogList}</Route>
+        <Route path={match.path}>
+          <CardGroup style={{margin: "20px"}}>{blogList}</CardGroup>
+        </Route>
       </Switch>
     </div>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const postdata = [
+const Postdata = [
     {
       id: 0,
       title: "Post1",
@@ -43,4 +43,4 @@ const postdata = [
     },
   ];
 
-export default postdata;
+export default Postdata;
