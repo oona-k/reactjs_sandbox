@@ -2,6 +2,12 @@ import React, { useState } from "react";
 import "./NewPost.css";
 import axios from "axios";
 
+import Form from "react-bootstrap/Form";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
+import Button from "react-bootstrap/Button";
+
 const NewPost = () => {
   const [newPost, setNewPost] = useState({
     title: "",
@@ -26,39 +32,59 @@ const NewPost = () => {
 
   return (
     <>
-      <h1>Add new post</h1>
-      <form className="newPost">
-        <div>
-          <label htmlFor="title">Title</label>
-          <input
-            type="text"
-            name="title"
-            id="title"
-            onChange={changeValueHandler}
-          />
-        </div>
-        <div>
-          <label htmlFor="desc">Description</label>
-          <textarea
-            type="text"
-            name="desc"
-            id="desc"
-            onChange={changeValueHandler}
-          />
-        </div>
-        <div>
-          <label htmlFor="img">Image URL</label>
-          <input
-            type="text"
-            name="img"
-            id="img"
-            onChange={changeValueHandler}
-          />
-        </div>
-        <button onClick={addPostHandler} type="submit">
-          Add new post
-        </button>
-      </form>
+      <Container>
+        <Col xl={{ span: 8, offset: 2 }}>
+          <h1 style={{ padding: "20px 0" }}>Add new post</h1>
+          <Form>
+            <Form.Group as={Row} controlId="title">
+              <Col sm={2}>
+                <Form-Label>Title</Form-Label>
+              </Col>
+              <Col sm={10}>
+                <Form.Control
+                  type="text"
+                  name="title"
+                  id="title"
+                  onChange={changeValueHandler}
+                />
+              </Col>
+            </Form.Group>
+
+            <Form.Group as={Row} controlId="desc">
+              <Col sm={2}>
+                <Form-Label>Description</Form-Label>
+              </Col>
+              <Col sm={10}>
+                <Form.Control
+                  type="text"
+                  name="desc"
+                  id="desc"
+                  onChange={changeValueHandler}
+                />
+              </Col>
+            </Form.Group>
+
+            <Form.Group as={Row} controlId="img">
+              <Col sm={2}>
+                <Form-Label>Image URL</Form-Label>
+              </Col>
+              <Col sm={10}>
+                <Form.Control
+                  type="text"
+                  name="img"
+                  id="img"
+                  onChange={changeValueHandler}
+                />
+              </Col>
+            </Form.Group>
+
+            <Button variant="primary" onClick={addPostHandler} type="submit">
+              Add new post
+            </Button>
+            
+          </Form>
+        </Col>
+      </Container>
     </>
   );
 };
