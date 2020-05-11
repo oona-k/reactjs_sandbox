@@ -7,6 +7,10 @@ import { Switch, Route, useRouteMatch } from "react-router-dom";
 import postdata from "../../postdata";
 import FullPost from "../FullPost/FullPost";
 
+import CardGroup from 'react-bootstrap/CardGroup';
+import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
+
 const Blog = () => {
   const [post, setPost] = useState([]);
   let match = useRouteMatch();
@@ -44,6 +48,7 @@ const Blog = () => {
         link={`${match.url}/${p.id}`}
         remove={() => removeHandler(p.id)}
       />
+
     );
   });
 
@@ -55,8 +60,10 @@ const Blog = () => {
         </Route>
         <Route path={match.path}>
           <div>
-            <h1>Blog</h1>
-            {PostList}
+            <Container fluid="md">
+            <h1 style={{padding: "15px"}}>Blog</h1>
+          <CardGroup>{PostList}</CardGroup>
+          </Container>
           </div>
         </Route>
       </Switch>
