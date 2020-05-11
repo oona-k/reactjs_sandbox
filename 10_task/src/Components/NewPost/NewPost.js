@@ -56,7 +56,7 @@ const NewPost = () => {
               </Col>
               <Col sm={10}>
                 <Form.Control
-                  type="text"
+                  as="textarea"
                   name="desc"
                   id="desc"
                   onChange={changeValueHandler}
