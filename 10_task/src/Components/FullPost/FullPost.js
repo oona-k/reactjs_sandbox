@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import "./FullPost.css";
 import axios from "axios";
 
 import postdata from "../../postdata";
+
+import Container from 'react-bootstrap/Container';
+
 
 const FullPost = () => {
   const [loadedPost, setLoadedPost] = useState();
@@ -26,11 +29,17 @@ const FullPost = () => {
   }
   if (loadedPost) {
     postData = (
-      <div className="fullPost">
+      <div id="fullPost">
+      <Container className="fullPostContainer">
+      
         <h1>Post {loadedPost.id}</h1>
-        <p>{loadedPost.title}</p>
+        <h4>{loadedPost.title}</h4>
         <img src={loadedPost.img} alt={loadedPost.title} />
-      </div>
+        <p>{loadedPost.desc}</p>
+        <Link to="/blog">Back to blog</Link>
+     
+      </Container>
+       </div>
     );
   }
 

@@ -31,10 +31,10 @@ const NewPost = () => {
   };
 
   return (
-    <>
-      <Container>
+    <div id="newPost">
+      <Container className="newPostContainer">
         <Col xl={{ span: 8, offset: 2 }}>
-          <h1 style={{ padding: "20px 0" }}>Add new post</h1>
+          <h1>Add new post</h1>
           <Form>
             <Form.Group as={Row} controlId="title">
               <Col sm={2}>
@@ -77,15 +77,15 @@ const NewPost = () => {
                 />
               </Col>
             </Form.Group>
-
-            <Button variant="primary" onClick={addPostHandler} type="submit">
+<div style={{textAlign: "center"}}>
+            <Button variant="info" onClick={addPostHandler} type="submit">
               Add new post
             </Button>
-            
+            </div>
           </Form>
         </Col>
       </Container>
-    </>
+    </div>
   );
 };
 

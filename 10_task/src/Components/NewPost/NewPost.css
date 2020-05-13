@@ -14,3 +14,14 @@
   padding: 0.5rem;
   font-size: 0.8rem;
 } */
+
+.newPostContainer {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 50px 0;
+  margin-top: 80px;
+}
+#newPost h1{
+  text-align: center;
+  padding: 20px 0;
+}
