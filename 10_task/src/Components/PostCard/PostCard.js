@@ -1,7 +1,7 @@
 import React from "react";
 import Likes from "../Likes";
 
-// import "./PostCard.css";
+ import "./PostCard.css";
 import { Link } from "react-router-dom";
 
 import Card from "react-bootstrap/Card";
@@ -16,7 +16,7 @@ const PostCard = ({ title, img, desc, link, remove, likes, addLike }) => {
   return (
     <Col>
       <Card style={{ width: "20rem", marginBottom: "18px" }}>
-        <div /* className="postCard" */>
+        <div>
           <Card.Img variant="top" src={img} alt={title} />
           <Card.Body>
             <Card.Title>{title}</Card.Title>
@@ -38,7 +38,7 @@ const PostCard = ({ title, img, desc, link, remove, likes, addLike }) => {
           </Card.Body>
           <Card.Footer>
             <Row>
-              <Button variant="outline-secondary" onClick={addLike}>
+              <Button className="likeBtn" variant="outlike-secondary" onClick={addLike}>
                 Like <FontAwesomeIcon icon={faHeart} />
               </Button>
               <Likes likes={likes} />

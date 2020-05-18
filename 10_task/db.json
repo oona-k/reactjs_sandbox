@@ -5,7 +5,7 @@
       "title": "Post1",
       "desc": "Morbi sed aliquet nisi, in efficitur risus. Donec porttitor facilisis pulvinar. Maecenas porta eros eget dui ultrices sollicitudin. Vestibulum suscipit, libero eu vehicula cursus, metus ante vestibulum nisi, sed sollicitudin nisl ex ac arcu. ",
       "img": "https://source.unsplash.com/1600x900/?sky",
-      "likes": 1
+      "likes": 5
     },
     {
       "id": 2,
@@ -19,7 +19,7 @@
       "title": "Post3",
       "desc": "Quisque ut libero porttitor, aliquam felis ac, molestie arcu. Pellentesque sit amet tortor efficitur tellus pharetra ultrices. Quisque quis pretium massa. Duis consectetur porttitor pellentesque.",
       "img": "https://source.unsplash.com/1600x900/?nature",
-      "likes": 4
+      "likes": 5
     },
     {
       "id": 4,
