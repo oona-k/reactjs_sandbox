@@ -1,7 +1,7 @@
 import React from "react";
 import Likes from "../Likes";
 
- import "./PostCard.css";
+import "./PostCard.css";
 import { Link } from "react-router-dom";
 
 import Card from "react-bootstrap/Card";
@@ -10,7 +10,11 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHeart,
+  faBookOpen,
+  faTrashAlt,
+} from "@fortawesome/free-solid-svg-icons";
 
 const PostCard = ({ title, img, desc, link, remove, likes, addLike }) => {
   return (
@@ -25,6 +29,7 @@ const PostCard = ({ title, img, desc, link, remove, likes, addLike }) => {
             <Link to={link}>
               <Button variant="outline-info" style={{ margin: "5px" }}>
                 Read more
+                <FontAwesomeIcon icon={faBookOpen} style={{marginLeft:"5px"}}/>
               </Button>
             </Link>
 
@@ -34,11 +39,16 @@ const PostCard = ({ title, img, desc, link, remove, likes, addLike }) => {
               onClick={remove}
             >
               Remove
+              <FontAwesomeIcon icon={faTrashAlt} style={{marginLeft:"5px"}}/>
             </Button>
           </Card.Body>
           <Card.Footer>
             <Row>
-              <Button className="likeBtn" variant="outlike-secondary" onClick={addLike}>
+              <Button
+                className="likeBtn"
+                variant="outlike-secondary"
+                onClick={addLike}
+              >
                 Like <FontAwesomeIcon icon={faHeart} />
               </Button>
               <Likes likes={likes} />
