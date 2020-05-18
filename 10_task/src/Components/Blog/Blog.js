@@ -8,14 +8,11 @@ import postdata from "../../postdata";
 import FullPost from "../FullPost/FullPost";
 
 import CardGroup from "react-bootstrap/CardGroup";
-import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 
 const Blog = () => {
   const [post, setPost] = useState([]);
   let match = useRouteMatch();
-
-  // const [like, setLike] = useState(0);
 
   useEffect(() => {
     axios.get("http://localhost:3001/posts").then((response) => {
@@ -42,7 +39,7 @@ const Blog = () => {
 
   // What happens when Like button is clicked.
   const addLikeHandler = (id) => {
-    // Search one post with clicked id 
+    // Search one post with clicked id
     var postToAddLike = post.filter((p) => p.id === id)[0];
     console.log(postToAddLike);
     //increase likes by 1

@@ -77,10 +77,10 @@ const NewPost = () => {
                 />
               </Col>
             </Form.Group>
-<div style={{textAlign: "center"}}>
-            <Button variant="info" onClick={addPostHandler} type="submit">
-              Add new post
-            </Button>
+            <div style={{ textAlign: "center" }}>
+              <Button variant="info" onClick={addPostHandler} type="submit">
+                Add new post
+              </Button>
             </div>
           </Form>
         </Col>
