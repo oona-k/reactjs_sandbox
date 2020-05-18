@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import './Home.css';
 
@@ -9,7 +10,7 @@ const Home = () => {
     <div id="home">
       <Container className="homeContainer">
       <h1>Welcome to my homepage!</h1>
-      <h5>Here you can read blog posts or write a new post</h5>
+      <h5>Here you can <Link to="/blog" style={{color:"rgb(17, 118, 134)"}}>read blog posts </Link> or <Link to="/newpost" style={{color:"rgb(17, 118, 134)"}}>write a new post</Link></h5>
       </Container>
     </div>
   );
