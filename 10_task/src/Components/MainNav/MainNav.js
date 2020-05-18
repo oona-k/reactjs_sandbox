@@ -7,7 +7,7 @@ import Nav from "react-bootstrap/Nav";
 const MainNav = () => {
   return (
     <div>
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="light" variant="light">
         <Nav className="ml-auto">
           <Link to="/" className="nav-link">
             Home
