@@ -3,10 +3,9 @@ import { useParams, Link } from "react-router-dom";
 import "./FullPost.css";
 import axios from "axios";
 
-import postdata from "../../postdata";
 
-import Container from 'react-bootstrap/Container';
-
+import Container from "react-bootstrap/Container";
+import Image from "react-bootstrap/Image";
 
 const FullPost = () => {
   const [loadedPost, setLoadedPost] = useState();
@@ -14,12 +13,10 @@ const FullPost = () => {
 
   useEffect(() => {
     if (!loadedPost) {
-      axios
-        .get("http://localhost:3001/posts/" + postId)
-        .then((response) => {
-          console.log(response.data);
-          setLoadedPost(response.data);
-        });
+      axios.get("http://localhost:3001/posts/" + postId).then((response) => {
+        console.log(response.data);
+        setLoadedPost(response.data);
+      });
     }
   });
 
@@ -30,16 +27,14 @@ const FullPost = () => {
   if (loadedPost) {
     postData = (
       <div id="fullPost">
-      <Container className="fullPostContainer">
-      
-        <h1>Post {loadedPost.id}</h1>
-        <h4>{loadedPost.title}</h4>
-        <img src={loadedPost.img} alt={loadedPost.title} />
-        <p>{loadedPost.desc}</p>
-        <Link to="/blog">Back to blog</Link>
-     
-      </Container>
-       </div>
+        <Container className="fullPostContainer">
+          <h1>Post {loadedPost.id}</h1>
+          <h4>{loadedPost.title}</h4>
+          <Image src={loadedPost.img} alt={loadedPost.title} fluid />
+          <p>{loadedPost.desc}</p>
+          <Link to="/blog">Back to blog</Link>
+        </Container>
+      </div>
     );
   }
 

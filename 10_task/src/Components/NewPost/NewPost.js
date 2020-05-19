@@ -31,10 +31,10 @@ const NewPost = () => {
   };
 
   return (
-    <div id="newPost">
+    <div className="newPost">
       <Container className="newPostContainer">
         <Col xl={{ span: 8, offset: 2 }}>
-          <h1>Add new post</h1>
+          <h1>Add New Post</h1>
           <Form>
             <Form.Group as={Row} controlId="title">
               <Col sm={2}>
@@ -44,7 +44,6 @@ const NewPost = () => {
                 <Form.Control
                   type="text"
                   name="title"
-                  id="title"
                   onChange={changeValueHandler}
                 />
               </Col>
@@ -58,7 +57,6 @@ const NewPost = () => {
                 <Form.Control
                   as="textarea"
                   name="desc"
-                  id="desc"
                   onChange={changeValueHandler}
                 />
               </Col>
@@ -72,14 +70,13 @@ const NewPost = () => {
                 <Form.Control
                   type="text"
                   name="img"
-                  id="img"
                   onChange={changeValueHandler}
                 />
               </Col>
             </Form.Group>
             <div style={{ textAlign: "center" }}>
               <Button variant="info" onClick={addPostHandler} type="submit">
-                Add new post
+                Add New Post
               </Button>
             </div>
           </Form>

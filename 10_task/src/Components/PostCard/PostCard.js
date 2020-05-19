@@ -29,7 +29,10 @@ const PostCard = ({ title, img, desc, link, remove, likes, addLike }) => {
             <Link to={link}>
               <Button variant="outline-info" style={{ margin: "5px" }}>
                 Read more
-                <FontAwesomeIcon icon={faBookOpen} style={{marginLeft:"5px"}}/>
+                <FontAwesomeIcon
+                  icon={faBookOpen}
+                  style={{ marginLeft: "5px" }}
+                />
               </Button>
             </Link>
 
@@ -39,7 +42,10 @@ const PostCard = ({ title, img, desc, link, remove, likes, addLike }) => {
               onClick={remove}
             >
               Remove
-              <FontAwesomeIcon icon={faTrashAlt} style={{marginLeft:"5px"}}/>
+              <FontAwesomeIcon
+                icon={faTrashAlt}
+                style={{ marginLeft: "5px" }}
+              />
             </Button>
           </Card.Body>
           <Card.Footer>

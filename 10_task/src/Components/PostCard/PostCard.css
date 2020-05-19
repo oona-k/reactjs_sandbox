@@ -1,11 +1,9 @@
-
 .likeBtn {
   color: palevioletred;
-  border:1px solid paleVioletRed;
+  border: 1px solid paleVioletRed;
   margin-left: 15px;
 }
-.likeBtn:hover{
+.likeBtn:hover {
   background-color: palevioletred;
   color: white;
-  
 }

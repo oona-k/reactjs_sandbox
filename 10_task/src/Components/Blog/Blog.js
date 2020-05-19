@@ -4,7 +4,6 @@ import axios from "axios";
 import PostCard from "../PostCard/PostCard";
 import { Switch, Route, useRouteMatch } from "react-router-dom";
 
-import postdata from "../../postdata";
 import FullPost from "../FullPost/FullPost";
 
 import CardGroup from "react-bootstrap/CardGroup";
@@ -37,17 +36,19 @@ const Blog = () => {
       });
   };
 
-  // What happens when Like button is clicked.
   const addLikeHandler = (id) => {
-    // Search one post with clicked id
-    var postToAddLike = post.filter((p) => p.id === id)[0];
-    console.log(postToAddLike);
-    //increase likes by 1
-    postToAddLike.likes++;
+    console.log(id);
 
-    //use axios to replace post with updated likes. Get updated posts and set them to variable post.
+    var sameId = (p) => {
+      return p.id === id;
+    };
+
+    var likedPost = post.find(sameId);
+
+    likedPost.likes++;
+    console.log(likedPost);
     axios
-      .patch("http://localhost:3001/posts/" + id, postToAddLike)
+      .patch("http://localhost:3001/posts/" + id, likedPost)
       .then(() => {
         return axios.get("http://localhost:3001/posts");
       })
