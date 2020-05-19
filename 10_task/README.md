@@ -1,9 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Base for 10_task lecture
+Screenshots of the project
 
-Here you find a simple routing example
+![10th task: Homepage](./public/home.PNG)
 
-### `npm install`
+![10th task: Blog](./public/blog.PNG)
 
-After you clone this project, run npm install to include node modules.
+![10th task: New post form](./public/newPost.PNG)

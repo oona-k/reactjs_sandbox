@@ -19,7 +19,7 @@ const Blog = () => {
         const posts = response.data.slice(0, 10);
 
         setPost(posts);
-        console.log(posts);
+        //console.log(posts);
       }
     });
   }, []);
