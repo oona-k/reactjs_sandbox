@@ -13,6 +13,7 @@ const NewPost = () => {
     title: "",
     desc: "",
     img: "",
+    likes: 0,
   });
 
   const changeValueHandler = (e) => {

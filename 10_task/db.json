@@ -5,7 +5,7 @@
       "title": "Post1",
       "desc": "Morbi sed aliquet nisi, in efficitur risus. Donec porttitor facilisis pulvinar. Maecenas porta eros eget dui ultrices sollicitudin. Vestibulum suscipit, libero eu vehicula cursus, metus ante vestibulum nisi, sed sollicitudin nisl ex ac arcu. ",
       "img": "https://source.unsplash.com/QfHmrIUN9G0/1600x900",
-      "likes": 0
+      "likes": 7
     },
     {
       "id": 2,
@@ -19,7 +19,7 @@
       "title": "Post3",
       "desc": "Quisque ut libero porttitor, aliquam felis ac, molestie arcu. Pellentesque sit amet tortor efficitur tellus pharetra ultrices. Quisque quis pretium massa. Duis consectetur porttitor pellentesque.",
       "img": "https://source.unsplash.com/hbqTtTX5TRc/1600x900",
-      "likes": 7
+      "likes": 0
     },
     {
       "id": 4,
@@ -41,7 +41,7 @@
       "title": "Post6",
       "desc": "Maecenas ut lacus et risus lacinia accumsan tempus in eros. Vestibulum vitae magna hendrerit, lacinia quam at, finibus est. Etiam dapibus ex at turpis imperdiet, vel feugiat ipsum vehicula. Maecenas in aliquet augue. Mauris aliquam dui in fermentum eleifend.",
       "img": "https://source.unsplash.com/ufFIweqSPd4/1600x900",
-      "likes": 10
+      "likes": 11
     }
   ]
 }
