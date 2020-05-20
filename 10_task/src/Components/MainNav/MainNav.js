@@ -8,6 +8,7 @@ const MainNav = () => {
   return (
     <div>
       <Navbar bg="light" variant="light">
+      <Navbar.Brand href="/">My Blog</Navbar.Brand>
         <Nav className="ml-auto">
           <Link to="/" className="nav-link">
             Home
